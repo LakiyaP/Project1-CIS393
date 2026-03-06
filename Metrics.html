@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpsTrack | Metrics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">OpsTrack</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="metrics.html" class="active">Metrics</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-header">
+      <h1>Detailed Metrics</h1>
+      <p>Review performance categories and switch between reporting periods.</p>
+    </section>
+
+    <section class="filter-box">
+      <label for="timePeriod">Select Time Period:</label>
+      <select id="timePeriod" onchange="updateMetrics()">
+        <option value="week">This Week</option>
+        <option value="month">This Month</option>
+        <option value="quarter">This Quarter</option>
+      </select>
+    </section>
+
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <h3>Revenue</h3>
+        <p id="revenueMetric">$4,850</p>
+        <span>Estimated revenue for selected time period</span>
+      </div>
+
+      <div class="metric-card">
+        <h3>Labor Efficiency</h3>
+        <p id="laborMetric">81%</p>
+        <span>Scheduled hours compared to business demand</span>
+      </div>
+
+      <div class="metric-card">
+        <h3>Bookings</h3>
+        <p id="bookingMetric">96</p>
+        <span>Total bookings for selected time period</span>
+      </div>
+
+      <div class="metric-card">
+        <h3>Customer Retention</h3>
+        <p id="customerMetric">68%</p>
+        <span>Percentage of returning customers</span>
+      </div>
+    </section>
+
+    <section class="summary-section">
+      <h2>Operational Focus</h2>
+      <p>
+        OpsTrack is built to help businesses compare sales activity, labor usage, and customer demand.
+        With future back-end integration, users will be able to save business records, pull live reports,
+        and monitor trends over time.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OpsTrack. </p>
+  </footer>
+</body>
+</html>

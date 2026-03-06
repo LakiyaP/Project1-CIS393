@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpsTrack | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">OpsTrack</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="metrics.html">Metrics</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-header">
+      <h1>Business Dashboard</h1>
+      <p>A quick snapshot of key performance indicators for a small business.</p>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <h3>Weekly Revenue</h3>
+        <p id="weeklyRevenue">$4,850</p>
+      </div>
+      <div class="kpi-card">
+        <h3>Labor Hours</h3>
+        <p id="laborHours">162 hrs</p>
+      </div>
+      <div class="kpi-card">
+        <h3>Today's Bookings</h3>
+        <p id="todayBookings">27</p>
+      </div>
+      <div class="kpi-card">
+        <h3>Returning Customers</h3>
+        <p id="returningCustomers">68%</p>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Recent Performance</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Revenue</th>
+            <th>Labor Hours</th>
+            <th>Bookings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>02/18/2026</td>
+            <td>$620</td>
+            <td>22</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>02/19/2026</td>
+            <td>$710</td>
+            <td>24</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>02/20/2026</td>
+            <td>$785</td>
+            <td>25</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>02/21/2026</td>
+            <td>$910</td>
+            <td>29</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>02/22/2026</td>
+            <td>$1,025</td>
+            <td>31</td>
+            <td>27</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="action-section">
+      <button class="btn" onclick="refreshDashboard()">Refresh Sample Data</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OpsTrack. </p>
+  </footer>
+</body>
+</html>
