@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>OpsTrack Login</title>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <div class="form-container">
+      <h1>OpsTrack Login</h1>
+
+      <% if (error) { %>
+         <p class="error"><%= error %></p>
+      <% } %>
+
+      <form action="/login" method="POST" onsubmit="return validateLogin()">
+         <label>Username</label>
+         <input type="text" id="username" name="username">
+
+         <label>Password</label>
+         <input type="password" id="password" name="password">
+
+         <button type="submit">Login</button>
+      </form>
+
+      <p class="hint">Username: admin | Password: 1234</p>
+   </div>
+
+   <script src="/js/validation.js"></script>
+</body>
+</html>
