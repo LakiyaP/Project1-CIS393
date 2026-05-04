@@ -1,0 +1,11 @@
+CREATE DATABASE opstrack_db;
+
+USE opstrack_db;
+
+CREATE TABLE records (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   category VARCHAR(50) NOT NULL,
+   amount DECIMAL(10,2) NOT NULL,
+   record_date DATE NOT NULL,
+   notes VARCHAR(255)
+);
