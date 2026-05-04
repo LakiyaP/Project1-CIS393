@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>OpsTrack Dashboard</title>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   <nav>
+      <h2>OpsTrack</h2>
+      <div>
+         <a href="/dashboard">Dashboard</a>
+         <a href="/add">Add Record</a>
+         <a href="/logout">Logout</a>
+      </div>
+   </nav>
+
+   <main>
+      <h1>Business Records</h1>
+
+      <form method="GET" action="/dashboard" class="search-form">
+         <input type="text" name="search" placeholder="Search by category or notes" value="<%= search %>">
+         <button type="submit">Search</button>
+      </form>
+
+      <table>
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Category</th>
+               <th>Amount</th>
+               <th>Date</th>
+               <th>Notes</th>
+               <th>Actions</th>
+            </tr>
+         </thead>
+         <tbody>
+            <% records.forEach(record => { %>
+               <tr>
+                  <td><%= record.id %></td>
+                  <td><%= record.category %></td>
+                  <td>$<%= record.amount %></td>
+                  <td><%= record.record_date.toISOString().split("T")[0] %></td>
+                  <td><%= record.notes %></td>
+                  <td>
+                     <a class="edit-btn" href="/edit/<%= record.id %>">Edit</a>
+
+                     <form action="/delete/<%= record.id %>" method="POST" class="inline-form">
+                        <button class="delete-btn" type="submit">Delete</button>
+                     </form>
+                  </td>
+               </tr>
+            <% }) %>
+         </tbody>
+      </table>
+   </main>
+</body>
+</html>
